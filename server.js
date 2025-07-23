@@ -75,6 +75,6 @@ const PORT = process.env.PORT || 5000;
 module.exports = app;
 
 // Only start server if not in Vercel environment
-if (process.env.NODE_ENV !== 'production') {
+if (!process.env.VERCEL) {
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
